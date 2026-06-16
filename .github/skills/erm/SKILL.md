@@ -1,21 +1,22 @@
 ---
 name: erm
-description: Executes a targeted enterprise risk assessment following a precise identification, analysis, cause/effect rating, risk scoring, and prevention/reduction control workflow, sorting results from highest to lowest score and saving to a standalone CSV file.
+description: Executes a targeted enterprise risk assessment following a structured workflow of risks identification, cause/effect analysis, risk rating, risk scoring, risk criticality assessment, and generating prevention & reduction risk treatment control measures, and saving to a standalone risk register CSV file.
 license: Apache-2.0
 compatibility: Any agentskills.io compatible workspace
+tags: [enterprise-risk-management, erm, risk-management, risk-assessment, risk, ai-agents, skills, ai-agents-skill]
 metadata:
   written_by: waikwan
-  version: 1.0.0
-  domain: Enterprise Risk Management, ERM, Risk Management, Corporate Governance
+  version: 1.1.0
+  domain: Enterprise Risk Management, ERM, Risk Management, Risk Assessment, AI Agents Skill
   standard: Enterprise Risk Management Workflow Specification
 ---
 
 # Enterprise Risk Management (ERM) Skill
 
-This skill guides the agent through an end-to-end enterprise risk assessment based on explicit context, customizable scoping, rigorous cause-and-effect controls, and automated sorted CSV data outputs.
+This skill guides the agent through an end-to-end enterprise risk assessment workflow based on explicit context, customizable scoping, rigorous cause-and-effect controls, and automated sorted CSV data outputs.
 
 ## When to Use This Skill
-- When conducting a strategic, financial, operational, or enterprise (encompassing strategic, financial, and operational) risk profiling.
+- When conducting a strategic, financial, operational, or enterprise (encompassing strategic, financial, and operational) risk assessment.
 - When generating a comprehensive, spreadsheet-compatible risk register featuring cause-effect analysis, risk rating, risk ranking, and preventive and reductive risk treatment control measures.
 
 ## Required User Configuration Parameters
