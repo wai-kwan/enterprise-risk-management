@@ -7,7 +7,7 @@ metadata:
   tags: "enterprise-risk-management, erm, risk-management, risk-assessment, risk, ai-agents, skills, ai-agents-skill"
   written_by: wai-kwan
   github: "https://github.com/wai-kwan"
-  version: "1.2.0"
+  version: "1.2.1"
   domain: Enterprise Risk Management, ERM, Risk Management, Risk Assessment, AI Agents Skill
   standard: Enterprise Risk Management Workflow Specification
 ---
@@ -155,7 +155,7 @@ When another skill invoked Completion Mode, return the same information to it so
 ---
 
 ## Automated File Persistence & Output Formatting
-In **Generation Mode**, upon processing, the agent **MUST** automatically create (or overwrite) a clean, standard comma-separated values file named **`risk_register.csv`** in the active workspace directory, injecting the exact sorted 14-column tabular content layout specified in the Standard Template below. In **Completion Mode**, save the file under the name given in "Save the Completed Register" instead, so the user's input is never overwritten.
+In **Generation Mode**, upon processing, the agent **MUST** automatically create a clean, standard comma-separated values file named **`risk_register.csv`** in the active workspace directory, injecting the exact sorted 14-column tabular content layout specified in the Standard Template below. If the user or a calling skill names the output file, use that name instead. If a file of that name already exists, never overwrite it silently: ask the user whether to replace it, and if they decline or cannot be asked, save as `risk_register_2.csv` (or the next unused number) and say so. In **Completion Mode**, save the file under the name given in "Save the Completed Register" instead, so the user's input is never overwritten.
 
 - **Zero-Whitespace Commas (CRITICAL)**: Separate fields strictly with a single comma character (`,`). Do NOT output a space after any comma delimiter. The next character or opening quote must snap directly to the comma (use `,"* Text` and NEVER `, "* Text`).
 - **Strict Cell Encapsulation**: Wrap any text field containing physical line breaks, asterisks, or commas entirely in absolute double quotes (`"..."`) from the very first character to the very last character of that field.
