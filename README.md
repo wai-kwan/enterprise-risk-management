@@ -91,7 +91,7 @@ Before processing, the AI agent evaluates the user prompt for three core paramet
 2. **Risk Category Filter**: Filters strictly by `Strategic`, `Operational`, `Financial`, or `Enterprise` (default). The 'Enterprise' option will encompass a balanced mix of top Strategic, Operational, and Financial risks.
 3. **Risk Context Validation**: Expects a clear operational context (project brief, timeline, scenario, or company profile). **If the context is ambiguous, the agent will pause and prompt the user for clarification before executing.**
 
-The output is saved as `risk_register.csv` in the workspace directory, replacing any earlier file of that name.
+The output is saved as `risk_register.csv` in the workspace directory. If a file of that name already exists, the skill asks before replacing it, and otherwise saves the new register as `risk_register_2.csv` (or the next unused number).
 
 ---
 
